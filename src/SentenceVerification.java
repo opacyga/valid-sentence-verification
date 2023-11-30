@@ -8,7 +8,7 @@ public class SentenceVerification {
         SentenceVerification.input = input;
         if(!capitalLetterIsAtBeginning()) return false;
 
-        return false;
+        return true;
     }
 
     /**

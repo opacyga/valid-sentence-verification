@@ -11,13 +11,14 @@ public class SentenceVerificationIT {
 
     @Test
     public void startIsLowerCase() {
-        input = "this is an invalid sentence";
+        input = "this is an invalid sentence.";
         assertFalse(SentenceVerification.isSentenceValid(input));
     }
 
     @Test
     public void startIsUpperCase() {
-
+        input = "This is a valid sentence.";
+        assertTrue(SentenceVerification.isSentenceValid(input));
     }
 
     @Test
