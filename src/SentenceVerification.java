@@ -1,3 +1,5 @@
+package src;
+
 public class SentenceVerification {
 
     private static String input;
