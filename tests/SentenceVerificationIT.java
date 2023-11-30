@@ -23,6 +23,8 @@ public class SentenceVerificationIT {
 
     @Test
     public void startIsNotLetter() {
+        input = "0 is not a sentence starter";
+        assertFalse(SentenceVerification.isSentenceValid(input));
 
     }
 }
