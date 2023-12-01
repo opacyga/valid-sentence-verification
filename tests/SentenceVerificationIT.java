@@ -122,4 +122,31 @@ public class SentenceVerificationIT {
         input = "This also? Isn't! A valid sentence.";
         assertFalse(SentenceVerification.isSentenceValid(input));
     }
+
+    //////////////////////Number Testing/////////////////////
+
+    /**
+     * checks that digits below 13 in a sentence will return false from isValidSentence
+     */
+    @Test
+    public void digitsBelow13() {
+
+    }
+
+    /**
+     * checks that if "13" is included in the sentence, true will be returned from isValidSentence
+     */
+    @Test
+    public void digit13Boundary() {
+
+    }
+
+    /**
+     * checks that digits above 13 in a sentence return true from isValidSentence
+     */
+    @Test
+    public void digitAbove13() {
+
+    }
+
 }
