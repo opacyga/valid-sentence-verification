@@ -74,14 +74,34 @@ public class SentenceVerificationIT {
      */
     @Test
     public void danglingSentence() {
-
+        input = "This sentence has no termination character";
+        assertFalse(SentenceVerification.isSentenceValid(input));
     }
 
     /**
-     * checks that a sentence ended with a termination character (e.g. ".") returns true from isValidSentence
+     * checks that a sentence ended with a ! returns true from isValidSentence
      */
     @Test
-    public void terminatedSentence() {
+    public void terminatedExclamationSentence() {
+        input = "This sentence has a termination character!";
+        assertTrue(SentenceVerification.isSentenceValid(input));
+    }
 
+    /**
+     * checks that a sentence ended with a . returns true from isValidSentence
+     */
+    @Test
+    public void terminatedFullStopSentence() {
+        input = "This sentence has a termination character.";
+        assertTrue(SentenceVerification.isSentenceValid(input));
+    }
+
+    /**
+     * checks that a sentence ended with a . returns true from isValidSentence
+     */
+    @Test
+    public void terminatedQuestionMarkSentence() {
+        input = "This sentence has a termination character?";
+        assertTrue(SentenceVerification.isSentenceValid(input));
     }
 }
