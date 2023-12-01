@@ -74,6 +74,8 @@ public class SentenceVerification {
         String[] numbers = input.split("\\d+"); // "\d+" regex will find digits of any length and place
         // them inside the numbers string array.
 
+        if (numbers[0].equals(input))  return true; // if no matches are found with split, the original string is returned.
+        // If no digits are in the input string then the method has nothing to check and so it returns true.
         for (String number : numbers) {
             if (Integer.parseInt(number) < 13)
                 return false; // if number is below 13, (and so isn't spelled out) return false
