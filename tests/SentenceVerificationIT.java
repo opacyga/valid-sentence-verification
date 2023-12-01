@@ -130,7 +130,8 @@ public class SentenceVerificationIT {
      */
     @Test
     public void digitsBelow13() {
-
+        input = "This is 2 not a valid sentence.";
+        assertFalse(SentenceVerification.isSentenceValid(input));
     }
 
     /**
@@ -138,7 +139,8 @@ public class SentenceVerificationIT {
      */
     @Test
     public void digit13Boundary() {
-
+        input = "This is 13 a valid sentence.";
+        assertTrue(SentenceVerification.isSentenceValid(input));
     }
 
     /**
@@ -146,7 +148,8 @@ public class SentenceVerificationIT {
      */
     @Test
     public void digitAbove13() {
-
+        input = "This is 2581 a valid sentence.";
+        assertTrue(SentenceVerification.isSentenceValid(input));
     }
 
 }
