@@ -18,6 +18,9 @@ public class SentenceVerification {
     public static boolean isSentenceValid(String input) {
         SentenceVerification.input = input;
         if(!capitalLetterIsAtBeginning()) return false;
+        for (int i = 0; i < input.length(); i++) {
+
+        }
 
         return true;
     }
