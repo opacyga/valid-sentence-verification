@@ -104,4 +104,20 @@ public class SentenceVerificationIT {
         input = "This sentence has a termination character?";
         assertTrue(SentenceVerification.isSentenceValid(input));
     }
+
+    /**
+     * checks that a sentence with more than one period returns false from isValidSentence
+     */
+    @Test
+    public void moreThanFullStop() {
+
+    }
+
+    /**
+     * checks that a sentence with a mix of termination characters returns false from isValidSentence
+     */
+    @Test
+    public void moreThanOneMixedTerminationCharacters() {
+
+    }
 }
