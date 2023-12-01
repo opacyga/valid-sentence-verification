@@ -18,10 +18,12 @@ public class SentenceVerification {
     public static boolean isSentenceValid(String input) {
         SentenceVerification.input = input;
         if(!capitalLetterIsAtBeginning()) return false;
+        int quotationNumber = 0;
         for (int i = 0; i < input.length(); i++) {
+            if (input.charAt(i) == '"') quotationNumber++;
 
         }
-
+        if (quotationNumber % 2 == 1) return false; // uneven number of quotation marks in the entire string
         return true;
     }
 
@@ -42,10 +44,6 @@ public class SentenceVerification {
         return first >= 65 && first <= 90;
     }
 
-    private static boolean evenNumberQuotationMarks() {
-
-        return false;
-    }
 
     private static boolean stringTerminated() {
 
