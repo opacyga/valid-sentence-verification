@@ -8,6 +8,9 @@ import static org.junit.Assert.*;
 public class SentenceVerificationIT {
     static String input;
 
+
+
+    //////////////////////Capital Letter Testing/////////////////////
     /**
      * Checks if the first letter being lower case returns false from isSentenceValid
      */
@@ -36,6 +39,7 @@ public class SentenceVerificationIT {
 
     }
 
+    //////////////////////Quotation Mark Testing/////////////////////
     /**
      * checks if an even number of quotations results in true being returned from isSentenceValid
      */
@@ -62,4 +66,7 @@ public class SentenceVerificationIT {
         input = "This sentence has no quotations.";
         assertTrue(SentenceVerification.isSentenceValid(input));
     }
+
+    //////////////////////Termination Character Testing/////////////////////
+
 }
