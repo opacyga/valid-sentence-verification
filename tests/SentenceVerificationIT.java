@@ -35,4 +35,28 @@ public class SentenceVerificationIT {
         assertFalse(SentenceVerification.isSentenceValid(input));
 
     }
+
+    /**
+     * checks if an even number of quotations results in true being returned from isSentenceValid
+     */
+    @Test
+    public void evenNumberOfQuotations() {
+
+    }
+
+    /**
+     * checks if an odd number of quotations results in false being returned from isSentenceValid
+     */
+    @Test
+    public void oddNumberOfQuotations() {
+
+    }
+
+    /**
+     * checks that no quotations in the string will not affect the result
+     */
+    @Test
+    public void noQuotations() {
+
+    }
 }
