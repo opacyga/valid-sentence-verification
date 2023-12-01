@@ -20,11 +20,14 @@ public class SentenceVerification {
         if(!capitalLetterIsAtBeginning()) return false;
         if(!stringTerminated()) return false;
         int quotationNumber = 0;
+        int terminationCharacterCount = 0; // counts number of times a termination character has occurred in string
         for (int i = 0; i < input.length(); i++) {
             if (input.charAt(i) == '"') quotationNumber++;
+            if (input.charAt(i) == '!' || input.charAt(i) == '.' || input.charAt(i) == '?') terminationCharacterCount++;
 
         }
         if (quotationNumber % 2 == 1) return false; // uneven number of quotation marks in the entire string
+        if (terminationCharacterCount > 1) return false; // only allow one (at the end) termination character in string
         return true;
     }
 
@@ -53,11 +56,6 @@ public class SentenceVerification {
     private static boolean stringTerminated() {
         char last = input.charAt(input.length()-1); // final character in input string
         if (last == '!' || last == '.' || last == '?') return true;
-        return false;
-    }
-
-    private static boolean periodCharOnlyAtEnd() {
-
         return false;
     }
 
