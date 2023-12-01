@@ -31,7 +31,7 @@ public class SentenceVerificationIT {
      */
     @Test
     public void startIsNotLetter() {
-        input = "0 is not a sentence starter";
+        input = "0 is not a sentence starter.";
         assertFalse(SentenceVerification.isSentenceValid(input));
 
     }
@@ -41,7 +41,8 @@ public class SentenceVerificationIT {
      */
     @Test
     public void evenNumberOfQuotations() {
-
+        input = "This is a \"valid\" sentence.";
+        assertTrue(SentenceVerification.isSentenceValid(input));
     }
 
     /**
@@ -49,7 +50,8 @@ public class SentenceVerificationIT {
      */
     @Test
     public void oddNumberOfQuotations() {
-
+        input = "This is an \"invalid sentence.";
+        assertFalse(SentenceVerification.isSentenceValid(input));
     }
 
     /**
@@ -57,6 +59,7 @@ public class SentenceVerificationIT {
      */
     @Test
     public void noQuotations() {
-
+        input = "This sentence has no quotations.";
+        assertTrue(SentenceVerification.isSentenceValid(input));
     }
 }
