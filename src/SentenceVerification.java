@@ -17,9 +17,9 @@ public class SentenceVerification {
      */
     public static boolean isSentenceValid(String input) {
         SentenceVerification.input = input;
-        if(!capitalLetterIsAtBeginning()) return false;
-        if(!stringTerminated()) return false;
-        int quotationNumber = 0;
+        if(!capitalLetterIsAtBeginning()) return false; // checks if string starts with a capital letter
+        if(!stringTerminated()) return false; // checks if string is terminated properly
+        int quotationNumber = 0; // number of quotation marks in sentence
         for (int i = 0; i < input.length(); i++) {
             if (input.charAt(i) == '"') quotationNumber++;
 
