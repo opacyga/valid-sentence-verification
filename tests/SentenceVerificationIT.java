@@ -69,4 +69,19 @@ public class SentenceVerificationIT {
 
     //////////////////////Termination Character Testing/////////////////////
 
+    /**
+     * checks that a sentence ending with no termination character returns false from isValidSentence
+     */
+    @Test
+    public void danglingSentence() {
+
+    }
+
+    /**
+     * checks that a sentence ended with a termination character (e.g. ".") returns true from isValidSentence
+     */
+    @Test
+    public void terminatedSentence() {
+
+    }
 }
