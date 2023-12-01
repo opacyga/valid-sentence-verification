@@ -110,7 +110,8 @@ public class SentenceVerificationIT {
      */
     @Test
     public void moreThanFullStop() {
-
+        input = "This. Is. Not. A. Valid. Sentence.";
+        assertFalse(SentenceVerification.isSentenceValid(input));
     }
 
     /**
@@ -118,6 +119,7 @@ public class SentenceVerificationIT {
      */
     @Test
     public void moreThanOneMixedTerminationCharacters() {
-
+        input = "This also? Isn't! A valid sentence.";
+        assertFalse(SentenceVerification.isSentenceValid(input));
     }
 }
