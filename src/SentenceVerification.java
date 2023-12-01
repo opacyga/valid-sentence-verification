@@ -18,6 +18,7 @@ public class SentenceVerification {
     public static boolean isSentenceValid(String input) {
         SentenceVerification.input = input;
         if(!capitalLetterIsAtBeginning()) return false;
+        if(!stringTerminated()) return false;
         int quotationNumber = 0;
         for (int i = 0; i < input.length(); i++) {
             if (input.charAt(i) == '"') quotationNumber++;
@@ -44,7 +45,11 @@ public class SentenceVerification {
         return first >= 65 && first <= 90;
     }
 
-
+    /**
+     * Checks if the last character is a proper termination character such as ".", "?", "!"
+     *
+     * @return true if it is a proper termination character, false otherwise.
+     */
     private static boolean stringTerminated() {
 
         return false;
