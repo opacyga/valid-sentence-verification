@@ -51,7 +51,8 @@ public class SentenceVerification {
      * @return true if it is a proper termination character, false otherwise.
      */
     private static boolean stringTerminated() {
-
+        char last = input.charAt(input.length()-1); // final character in input string
+        if (last == '!' || last == '.' || last == '?') return true;
         return false;
     }
 
